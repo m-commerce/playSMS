@@ -68,44 +68,44 @@ echo "playSMS bin path    = $PATHBIN"
 echo
 
 echo "=================================================================="
-echo
-echo "Please read and confirm INSTALL DATA above"
-echo
-confirm=
-while [ -z $confirm ]
-do
-	read -p "When you're ready press [y/Y] or press [Control+C] to cancel " confirm
-	if [[ $confirm == 'y' ]]; then
-		break
-	fi
-	if [[ $confirm == 'Y' ]]; then
-		break
-	fi
-	confirm=
-done
-echo
-echo "=================================================================="
-echo
-
-sleep 1
-
-echo "Are you sure ?"
-echo
-echo "Please read and check again the INSTALL DATA above"
-echo
-confirm=
-while [ -z $confirm ]
-do
-	read -p "When you're ready press [y/Y] or press [Control+C] to cancel " confirm
-	if [[ $confirm == 'y' ]]; then
-		break
-	fi
-	if [[ $confirm == 'Y' ]]; then
-		break
-	fi
-	confirm=
-done
-echo
+#echo
+#echo "Please read and confirm INSTALL DATA above"
+#echo
+#confirm=
+#while [ -z $confirm ]
+#do
+#	read -p "When you're ready press [y/Y] or press [Control+C] to cancel " confirm
+#	if [[ $confirm == 'y' ]]; then
+#		break
+#	fi
+#	if [[ $confirm == 'Y' ]]; then
+#		break
+#	fi
+#	confirm=
+#done
+#echo
+#echo "=================================================================="
+#echo
+#
+#sleep 1
+#
+#echo "Are you sure ?"
+#echo
+#echo "Please read and check again the INSTALL DATA above"
+#echo
+#confirm=
+#while [ -z $confirm ]
+#do
+#	read -p "When you're ready press [y/Y] or press [Control+C] to cancel " confirm
+#	if [[ $confirm == 'y' ]]; then
+#		break
+#	fi
+#	if [[ $confirm == 'Y' ]]; then
+#		break
+#	fi
+#	confirm=
+#done
+#echo
 echo "=================================================================="
 echo
 echo "Installation is in progress"
