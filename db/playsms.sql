@@ -1142,7 +1142,7 @@ CREATE TABLE `playsms_tblConfig_main` (
 
 LOCK TABLES `playsms_tblConfig_main` WRITE;
 /*!40000 ALTER TABLE `playsms_tblConfig_main` DISABLE KEYS */;
-INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'Chillidrop','noreply@m-commerce.net','powered by Chillidrop','nexmo','','play',0.03,'en_US','+0000',3,10,0,1);
+INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'Chillidrop','noreply@m-commerce.net','powered by Chillidrop','nexmo','','default',0.03,'en_US','+0000',3,10,0,1);
 /*!40000 ALTER TABLE `playsms_tblConfig_main` ENABLE KEYS */;
 UNLOCK TABLES;
 
