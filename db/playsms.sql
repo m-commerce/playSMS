@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: playsms
 -- ------------------------------------------------------
--- Server version	5.5.31-0ubuntu0.12.04.1
+-- Server version  5.5.31-0ubuntu0.12.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -521,14 +521,12 @@ CREATE TABLE `playsms_featureSubscribe` (
   `subscribe_id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL DEFAULT '0',
   `subscribe_keyword` varchar(20) NOT NULL,
-  `subscribe_msg` varchar(140) NOT NULL DEFAULT '',
-  `unsubscribe_msg` varchar(140) NOT NULL DEFAULT '',
+  `subscribe_msg` varchar(200) NOT NULL,
+  `unsubscribe_msg` varchar(200) NOT NULL,
   `subscribe_enable` int(11) NOT NULL DEFAULT '0',
   `subscribe_param` varchar(20) NOT NULL,
   `unsubscribe_param` varchar(20) NOT NULL,
   `forward_param` varchar(20) NOT NULL,
-  `unknown_format_msg` varchar(140) NOT NULL DEFAULT '',
-  `already_member_msg` varchar(140) NOT NULL DEFAULT '',
   PRIMARY KEY (`subscribe_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -955,7 +953,7 @@ CREATE TABLE `playsms_gatewayNexmo_config` (
   `cfg_api_key` varchar(100) DEFAULT NULL,
   `cfg_api_secret` varchar(100) DEFAULT NULL,
   `cfg_global_sender` varchar(20) DEFAULT NULL,
-  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000'
+  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0700'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -965,7 +963,7 @@ CREATE TABLE `playsms_gatewayNexmo_config` (
 
 LOCK TABLES `playsms_gatewayNexmo_config` WRITE;
 /*!40000 ALTER TABLE `playsms_gatewayNexmo_config` DISABLE KEYS */;
-INSERT INTO `playsms_gatewayNexmo_config` VALUES (0,'nexmo','https://rest.nexmo.com/sms/json','12345678','87654321','chillidrop','+0000');
+INSERT INTO `playsms_gatewayNexmo_config` VALUES (0,'nexmo','https://rest.nexmo.com/sms/json','12345678','87654321','playSMS','+0700');
 /*!40000 ALTER TABLE `playsms_gatewayNexmo_config` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1126,11 +1124,11 @@ CREATE TABLE `playsms_tblConfig_main` (
   `cfg_gateway_module` varchar(20) DEFAULT NULL,
   `cfg_gateway_number` varchar(100) DEFAULT NULL,
   `cfg_themes_module` varchar(100) DEFAULT NULL,
-  `cfg_default_rate` float NOT NULL DEFAULT '0.03',
+  `cfg_default_rate` float NOT NULL DEFAULT '0',
   `cfg_language_module` varchar(10) DEFAULT 'en_US',
-  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000',
+  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0700',
   `cfg_sms_max_count` tinyint(4) NOT NULL DEFAULT '3',
-  `cfg_default_credit` float NOT NULL DEFAULT '10',
+  `cfg_default_credit` float NOT NULL DEFAULT '0',
   `cfg_enable_register` tinyint(4) NOT NULL DEFAULT '0',
   `cfg_enable_forgot` tinyint(4) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -1142,7 +1140,7 @@ CREATE TABLE `playsms_tblConfig_main` (
 
 LOCK TABLES `playsms_tblConfig_main` WRITE;
 /*!40000 ALTER TABLE `playsms_tblConfig_main` DISABLE KEYS */;
-INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'Chillidrop','noreply@m-commerce.net','powered by Chillidrop','nexmo','','default',0.03,'en_US','+0000',3,10,0,1);
+INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'playSMS','noreply@playsms.org','powered by playSMS','smstools','000','default',0,'en_US','+0700',3,0,0,1);
 /*!40000 ALTER TABLE `playsms_tblConfig_main` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1306,17 +1304,17 @@ CREATE TABLE `playsms_tblUser` (
   `state` varchar(100) NOT NULL DEFAULT '',
   `country` int(11) NOT NULL DEFAULT '0',
   `zipcode` varchar(10) NOT NULL DEFAULT '',
-  `credit` double NOT NULL DEFAULT '10',
-  `datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000',
+  `credit` double NOT NULL DEFAULT '0',
+  `datetime_timezone` varchar(30) NOT NULL DEFAULT '+0700',
   `language_module` varchar(10) NOT NULL DEFAULT 'en_US',
   `fwd_to_mobile` tinyint(4) NOT NULL DEFAULT '0',
-  `fwd_to_email` tinyint(4) NOT NULL DEFAULT '0',
+  `fwd_to_email` tinyint(4) NOT NULL DEFAULT '1',
   `fwd_to_inbox` tinyint(4) NOT NULL DEFAULT '1',
-  `replace_zero` varchar(5) NOT NULL DEFAULT '1',
+  `replace_zero` varchar(5) NOT NULL DEFAULT '',
   `plus_sign_remove` tinyint(4) NOT NULL DEFAULT '1',
-  `plus_sign_add` tinyint(4) NOT NULL DEFAULT '1',
+  `plus_sign_add` tinyint(4) NOT NULL DEFAULT '0',
   `send_as_unicode` tinyint(4) NOT NULL DEFAULT '0',
-  `local_length` tinyint(4) NOT NULL DEFAULT '10',
+  `local_length` tinyint(4) NOT NULL DEFAULT '9',
   `register_datetime` varchar(20) NOT NULL DEFAULT '0000-00-00 00:00:00',
   `lastupdate_datetime` varchar(20) NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`uid`)
@@ -1329,7 +1327,7 @@ CREATE TABLE `playsms_tblUser` (
 
 LOCK TABLES `playsms_tblUser` WRITE;
 /*!40000 ALTER TABLE `playsms_tblUser` DISABLE KEYS */;
-INSERT INTO `playsms_tblUser` VALUES (1332916885,1,2,'dd4aa3580e3de07858d812dcc094c32f','admin','21232f297a57a5a743894a0e4a801fc3','',0,'127.0.0.1, 192.168.*.*','Administrator','+44000000000','noreply@m-commerce.net','chillidrop','chillidrop','','','',108,'',10,'+0000','en_US',0,1,1,'',1,0,0,0,'','');
+INSERT INTO `playsms_tblUser` VALUES (1332916885,1,2,'dd4aa3580e3de07858d812dcc094c32f','admin','21232f297a57a5a743894a0e4a801fc3','',0,'127.0.0.1, 192.168.*.*','Administrator','+447787370900','rob@leanelephant.com','Chillidrop','Chillidrop','','','',132,'','10','+0000','en_US',0,0,1,'',1,0,0,'10','','');
 /*!40000 ALTER TABLE `playsms_tblUser` ENABLE KEYS */;
 UNLOCK TABLES;
 
