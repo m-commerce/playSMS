@@ -1309,12 +1309,12 @@ CREATE TABLE `playsms_tblUser` (
   `language_module` varchar(10) NOT NULL DEFAULT 'en_US',
   `fwd_to_mobile` tinyint(4) NOT NULL DEFAULT '0',
   `fwd_to_email` tinyint(4) NOT NULL DEFAULT '1',
-  `fwd_to_inbox` tinyint(4) NOT NULL DEFAULT '1',
-  `replace_zero` varchar(5) NOT NULL DEFAULT '',
+  `fwd_to_inbox` tinyint(4) NOT NULL DEFAULT '0',
+  `replace_zero` varchar(5) NOT NULL DEFAULT '0',
   `plus_sign_remove` tinyint(4) NOT NULL DEFAULT '1',
-  `plus_sign_add` tinyint(4) NOT NULL DEFAULT '0',
+  `plus_sign_add` tinyint(4) NOT NULL DEFAULT '1',
   `send_as_unicode` tinyint(4) NOT NULL DEFAULT '0',
-  `local_length` tinyint(4) NOT NULL DEFAULT '9',
+  `local_length` tinyint(4) NOT NULL DEFAULT '10',
   `register_datetime` varchar(20) NOT NULL DEFAULT '0000-00-00 00:00:00',
   `lastupdate_datetime` varchar(20) NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`uid`)
@@ -1327,7 +1327,7 @@ CREATE TABLE `playsms_tblUser` (
 
 LOCK TABLES `playsms_tblUser` WRITE;
 /*!40000 ALTER TABLE `playsms_tblUser` DISABLE KEYS */;
-INSERT INTO `playsms_tblUser` VALUES (1332916885,1,2,'dd4aa3580e3de07858d812dcc094c32f','admin','21232f297a57a5a743894a0e4a801fc3','',0,'127.0.0.1, 192.168.*.*','Administrator','+447787370900','rob@leanelephant.com','Chillidrop','Chillidrop','','','',108,'','10','+0000','en_US',0,0,1,'',1,0,0,'10','','');
+INSERT INTO `playsms_tblUser` VALUES (1332916885,1,2,'dd4aa3580e3de07858d812dcc094c32f','admin','21232f297a57a5a743894a0e4a801fc3','',0,'127.0.0.1, 192.168.*.*','Administrator','+447787370900','rob@leanelephant.com','Chillidrop','Chillidrop','','','',108,'','10','+0000','en_US',0,0,1,'44',1,1,0,'10','','');
 /*!40000 ALTER TABLE `playsms_tblUser` ENABLE KEYS */;
 UNLOCK TABLES;
 
