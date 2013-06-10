@@ -1120,17 +1120,17 @@ DROP TABLE IF EXISTS `playsms_tblConfig_main`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `playsms_tblConfig_main` (
   `c_timestamp` int(11) NOT NULL DEFAULT '0',
-  `cfg_web_title` varchar(250) DEFAULT NULL,
+  `cfg_web_title` varchar(250) DEFAULT NULL 'powered by Chillidrop',
   `cfg_email_service` varchar(250) DEFAULT NULL,
   `cfg_email_footer` varchar(250) DEFAULT NULL,
-  `cfg_gateway_module` varchar(20) DEFAULT NULL,
+  `cfg_gateway_module` varchar(20) DEFAULT NULL 'nexmo',
   `cfg_gateway_number` varchar(100) DEFAULT NULL,
-  `cfg_themes_module` varchar(100) DEFAULT NULL,
-  `cfg_default_rate` float NOT NULL DEFAULT '0',
+  `cfg_themes_module` varchar(100) DEFAULT NULL 'play',
+  `cfg_default_rate` float NOT NULL DEFAULT '0.03',
   `cfg_language_module` varchar(10) DEFAULT 'en_US',
-  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0700',
+  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000',
   `cfg_sms_max_count` tinyint(4) NOT NULL DEFAULT '3',
-  `cfg_default_credit` float NOT NULL DEFAULT '0',
+  `cfg_default_credit` float NOT NULL DEFAULT '10',
   `cfg_enable_register` tinyint(4) NOT NULL DEFAULT '0',
   `cfg_enable_forgot` tinyint(4) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -1142,7 +1142,7 @@ CREATE TABLE `playsms_tblConfig_main` (
 
 LOCK TABLES `playsms_tblConfig_main` WRITE;
 /*!40000 ALTER TABLE `playsms_tblConfig_main` DISABLE KEYS */;
-INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'Chillidrop','noreply@m-commerce.net','powered by Chillidrop','nexmo','','play',10,'en_US','+0000',3,0,0,1);
+INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'Chillidrop','noreply@m-commerce.net','powered by Chillidrop','nexmo','','play',0.03,'en_US','+0000',3,10,0,1);
 /*!40000 ALTER TABLE `playsms_tblConfig_main` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1304,7 +1304,7 @@ CREATE TABLE `playsms_tblUser` (
   `address` varchar(250) NOT NULL DEFAULT '',
   `city` varchar(100) NOT NULL DEFAULT '',
   `state` varchar(100) NOT NULL DEFAULT '',
-  `country` int(11) NOT NULL DEFAULT '0',
+  `country` int(11) NOT NULL DEFAULT '',
   `zipcode` varchar(10) NOT NULL DEFAULT '',
   `credit` double NOT NULL DEFAULT '10',
   `datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000',
