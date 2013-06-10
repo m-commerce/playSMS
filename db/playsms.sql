@@ -1140,7 +1140,7 @@ CREATE TABLE `playsms_tblConfig_main` (
 
 LOCK TABLES `playsms_tblConfig_main` WRITE;
 /*!40000 ALTER TABLE `playsms_tblConfig_main` DISABLE KEYS */;
-INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'playSMS','noreply@playsms.org','powered by playSMS','smstools','000','default',0,'en_US','+0700',3,0,0,1);
+INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'Chillidrop','noreply@m-commerce.net','powered by Chillidrop','nexmo','Chillidrop','play',0,'en_US','+0000',3,0,0,1);
 /*!40000 ALTER TABLE `playsms_tblConfig_main` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1305,7 +1305,7 @@ CREATE TABLE `playsms_tblUser` (
   `country` int(11) NOT NULL DEFAULT '0',
   `zipcode` varchar(10) NOT NULL DEFAULT '',
   `credit` double NOT NULL DEFAULT '0',
-  `datetime_timezone` varchar(30) NOT NULL DEFAULT '+0700',
+  `datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000',
   `language_module` varchar(10) NOT NULL DEFAULT 'en_US',
   `fwd_to_mobile` tinyint(4) NOT NULL DEFAULT '0',
   `fwd_to_email` tinyint(4) NOT NULL DEFAULT '1',
@@ -1327,7 +1327,7 @@ CREATE TABLE `playsms_tblUser` (
 
 LOCK TABLES `playsms_tblUser` WRITE;
 /*!40000 ALTER TABLE `playsms_tblUser` DISABLE KEYS */;
-INSERT INTO `playsms_tblUser` VALUES (1332916885,1,2,'dd4aa3580e3de07858d812dcc094c32f','admin','21232f297a57a5a743894a0e4a801fc3','',0,'127.0.0.1, 192.168.*.*','Administrator','+447787370900','rob@leanelephant.com','Chillidrop','Chillidrop','','','',132,'','10','+0000','en_US',0,0,1,'',1,0,0,'10','','');
+INSERT INTO `playsms_tblUser` VALUES (1332916885,1,2,'dd4aa3580e3de07858d812dcc094c32f','admin','21232f297a57a5a743894a0e4a801fc3','',0,'127.0.0.1, 192.168.*.*','Administrator','+447787370900','rob@leanelephant.com','Chillidrop','Chillidrop','','','',108,'','10','+0000','en_US',0,0,1,'',1,0,0,'10','','');
 /*!40000 ALTER TABLE `playsms_tblUser` ENABLE KEYS */;
 UNLOCK TABLES;
 
