@@ -1120,12 +1120,12 @@ DROP TABLE IF EXISTS `playsms_tblConfig_main`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `playsms_tblConfig_main` (
   `c_timestamp` int(11) NOT NULL DEFAULT '0',
-  `cfg_web_title` varchar(250) DEFAULT NULL 'powered by Chillidrop',
+  `cfg_web_title` varchar(250) DEFAULT NULL,
   `cfg_email_service` varchar(250) DEFAULT NULL,
   `cfg_email_footer` varchar(250) DEFAULT NULL,
-  `cfg_gateway_module` varchar(20) DEFAULT NULL 'nexmo',
+  `cfg_gateway_module` varchar(20) DEFAULT NULL,
   `cfg_gateway_number` varchar(100) DEFAULT NULL,
-  `cfg_themes_module` varchar(100) DEFAULT NULL 'play',
+  `cfg_themes_module` varchar(100) DEFAULT NULL,
   `cfg_default_rate` float NOT NULL DEFAULT '0.03',
   `cfg_language_module` varchar(10) DEFAULT 'en_US',
   `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000',
