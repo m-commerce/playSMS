@@ -953,7 +953,7 @@ CREATE TABLE `playsms_gatewayNexmo_config` (
   `cfg_api_key` varchar(100) DEFAULT NULL,
   `cfg_api_secret` varchar(100) DEFAULT NULL,
   `cfg_global_sender` varchar(20) DEFAULT NULL,
-  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0700'
+  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -963,7 +963,7 @@ CREATE TABLE `playsms_gatewayNexmo_config` (
 
 LOCK TABLES `playsms_gatewayNexmo_config` WRITE;
 /*!40000 ALTER TABLE `playsms_gatewayNexmo_config` DISABLE KEYS */;
-INSERT INTO `playsms_gatewayNexmo_config` VALUES (0,'nexmo','https://rest.nexmo.com/sms/json','12345678','87654321','playSMS','+0700');
+INSERT INTO `playsms_gatewayNexmo_config` VALUES (0,'nexmo','https://rest.nexmo.com/sms/json','12345678','87654321','','+0000');
 /*!40000 ALTER TABLE `playsms_gatewayNexmo_config` ENABLE KEYS */;
 UNLOCK TABLES;
 
