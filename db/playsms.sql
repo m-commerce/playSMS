@@ -1304,7 +1304,7 @@ CREATE TABLE `playsms_tblUser` (
   `address` varchar(250) NOT NULL DEFAULT '',
   `city` varchar(100) NOT NULL DEFAULT '',
   `state` varchar(100) NOT NULL DEFAULT '',
-  `country` int(11) NOT NULL DEFAULT '',
+  `country` int(11) NOT NULL DEFAULT '0',
   `zipcode` varchar(10) NOT NULL DEFAULT '',
   `credit` double NOT NULL DEFAULT '10',
   `datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000',
