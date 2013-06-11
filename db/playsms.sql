@@ -1126,7 +1126,7 @@ CREATE TABLE `playsms_tblConfig_main` (
   `cfg_themes_module` varchar(100) DEFAULT NULL,
   `cfg_default_rate` float NOT NULL DEFAULT '0',
   `cfg_language_module` varchar(10) DEFAULT 'en_US',
-  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0700',
+  `cfg_datetime_timezone` varchar(30) NOT NULL DEFAULT '+0000',
   `cfg_sms_max_count` tinyint(4) NOT NULL DEFAULT '3',
   `cfg_default_credit` float NOT NULL DEFAULT '0',
   `cfg_enable_register` tinyint(4) NOT NULL DEFAULT '0',
@@ -1140,7 +1140,7 @@ CREATE TABLE `playsms_tblConfig_main` (
 
 LOCK TABLES `playsms_tblConfig_main` WRITE;
 /*!40000 ALTER TABLE `playsms_tblConfig_main` DISABLE KEYS */;
-INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'Chillidrop','noreply@m-commerce.net','powered by Chillidrop','nexmo','Chillidrop','play',0,'en_US','+0000',3,0,0,1);
+INSERT INTO `playsms_tblConfig_main` VALUES (1332916845,'Chillidrop','noreply@m-commerce.net','powered by Chillidrop','nexmo','','play',0,'en_US','+0000',3,0,0,1);
 /*!40000 ALTER TABLE `playsms_tblConfig_main` ENABLE KEYS */;
 UNLOCK TABLES;
 
